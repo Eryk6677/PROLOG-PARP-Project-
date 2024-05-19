@@ -1,0 +1,277 @@
+?- [adventure].
+true.
+
+?- start.
+Before the game starts, you have to choose your stats:
+You can do that by using your 5 skill points that you can add to Strength, Agility or Health
+To add a point to one category use command add_(name of the stat).
+
+After you are done, enter: start_game.
+
+true.
+
+?- add_strength.
+Current Strength value: 6
+Skill points left: 4
+true.
+
+?- add_strength.
+Current Strength value: 7
+Skill points left: 3
+true.
+
+?- add_agility.
+Current Agility value: 6
+Skill points left: 2
+true.
+
+?- add_health.
+Current Health value: 11
+Skill points left: 1
+true.
+
+?- add_health.
+Current Health value: 12
+Skill points left: 0
+true.
+
+?- add_health.
+You have no skill points left!
+true.
+
+?- start_game.
+Enter commands using standard Prolog syntax.
+
+Available commands are:
+start.             -- to start the game.
+halt.              -- to end the game and quit.
+instructions.      -- to see this message again.
+clear              -- to clean the prompt.
+
+Movement commands:
+n.                 -- go north.
+s.                 -- go south.
+e.                 -- go east.
+w.                 -- go west.
+u.                 -- go up.
+d.                 -- go down.
+
+Action commands:
+look.              -- to look around you.
+open(Doors)        -- to open closed doors.
+inventory {i}      -- to check your inventory
+take(Object).      -- to pick up an object, and put it into your inventory.
+use(Object)        -- to grab an object from your inventory.
+drop(Object).      -- to put down an Object you are currently holding.
+attack(Enemy).     -- to attack an enemy with a weapon
+
+---------- STORY ----------
+The United Empire has been attacked by an evil horde of Ashurbanipal.
+You are the last alive commander of one of the eastern defense towers.
+Right now, you are left with only a small dagger as a last resort weapon.
+You have to make it out of the besiged city and warn the Emperor.
+
+You are in a surrounded defense tower.
+From here you can go south and enter tower's armoury.
+There is also the main door to the tower.
+
+There is a torch here.
+
+true.
+
+?- take(torch).
+OK.
+true.
+
+?- s.
+You are in the armoury of this defense tower.
+There is a closed hatch on the ground.
+
+There is a sword here.
+
+true.
+
+?- take(sword).
+OK.
+true.
+
+?- use(sword).
+OK.
+true.
+
+?- open(hatch).
+You opened the door.
+
+You are in the armoury of this tower.
+The opened hatch shows a hidden tunnel,
+but the drop is very big, you won't be able to climb back up.
+
+true.
+
+?- d.
+You are in a dark long tunnel.
+Despite the war above, the tunnel is very silent.
+There is no going back now,
+you can only go towards west.
+
+
+true.
+
+?- w.
+The long tunnel goes on.
+You can only go towards west.
+
+
+true.
+
+?- w.
+You come across a Ashurbanipal warrior!
+Now you have to fight!
+
+
+true.
+
+?- w.
+You can't go anywhere during a fight!
+true.
+
+?- attack.
+After attack - Your Health: 9 Enemy Health: 2
+
+true.
+
+?- attack.
+You defeated the enemy!
+The warrior has been defeated
+Now you can go further towards the west
+After attack - Your Health: 8 Enemy Health: -4
+
+true.
+
+?- w.
+There is a fork in the road, 
+You now you can go south or north.
+
+
+true.
+
+?- n.
+You come across a Ashurbanipal mage!
+Mage uses magic, so you can't avoid his attacks!
+Now you have to fight!
+
+
+true.
+
+?- attack.
+You defeated the enemy!
+You got 5 additional skill points from this fight! Skill points left: 5
+
+The mage has been defeated
+Now you can go further towards the west
+After attack - Your Health: 5 Enemy Health: 0
+
+true.
+
+?- add_healt.
+Correct to: "add_health"? yes
+Current Health value: 6
+Skill points left: 4
+true.
+
+?- add_health.
+Current Health value: 7
+Skill points left: 3
+true.
+
+?- add_health.
+Current Health value: 8
+Skill points left: 2
+true.
+
+?- add_health.
+Current Health value: 9
+Skill points left: 1
+true.
+
+?- add_health.
+Current Health value: 10
+Skill points left: 0
+true.
+
+?- look.
+The mage has been defeated
+Now you can go further towards the west
+
+
+true.
+
+?- s.
+There is a fork in the road, 
+You now you can go south or north.
+
+
+true.
+
+?- s.
+Well, this is just another empty room...
+You should just head west as previously.
+
+There is a artifact here.
+
+true.
+
+?- take(artifact).
+OK.
+true.
+
+?- w.
+This catacombs are getting cold, and empty,
+Let's head to the Emperor.
+The tunnel now turns towards north.
+
+
+true.
+
+?- n.
+There is another fork in the road, 
+You now you can go north, to the room where you could expect a mage,
+you can go south, where is nothing special...,
+or now you can go west, towards the main objective!,
+
+
+true.
+
+?- w.
+You come across another Ashurbanipal warrior!
+This seems to be the last fight before meeting with the Emperor.
+
+
+true.
+
+?- attack.
+After attack - Your Health: 7 Enemy Health: 4
+
+true.
+
+?- attack.
+You defeated the enemy!
+The warrior has been defeated
+Now you can easily head straight to Emperors castle.
+After attack - Your Health: 4 Enemy Health: -1
+
+true.
+
+?- w.
+--- CONGRATULATIONS! ---
+You reached the exit from the catacombs,
+lucky for you, they connect straight to the undergrounds
+of Emperors castle. The strange artifact, that you found earlier
+suddenly jumps out of your pocket, and shines with strong red light!
+Power of the artifact turns all of the Ashurbanipals into dust!
+You saved your entire City!!!
+
+The game is over. Please enter the "halt." command.
+
+
+true 

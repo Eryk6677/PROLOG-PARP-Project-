@@ -1,0 +1,173 @@
+You are in a surrounded defense tower.
+From here you can go south and enter tower's armoury.
+There is also the main door to the tower.
+
+There is a torch here.
+
+true.
+
+?- s.
+You are in the armoury of this defense tower.
+There is a closed hatch on the ground.
+
+There is a sword here.
+
+true.
+
+?- take(sword).
+OK.
+true.
+
+?- open(hatch).
+You opened the door.
+
+You are in the armoury of this tower.
+The opened hatch shows a hidden tunnel,
+but the drop is very big, you won't be able to climb back up.
+
+true.
+
+?- d.
+You are in a dark long tunnel.
+Despite the war above, the tunnel is very silent.
+There is no going back now,
+you can only go towards west.
+
+
+true.
+
+?- w.
+The long tunnel goes on.
+You can only go towards west.
+
+
+true.
+
+?- w.
+You come across a Ashurbanipal warrior!
+Now you have to fight!
+
+
+true.
+
+?- attack.
+After attack - Your Health: 10 Enemy Health: 6
+
+true.
+
+?- attack.
+After attack - Your Health: 10 Enemy Health: 2
+
+true.
+
+?- attack.
+You defeated the enemy!
+The warrior has been defeated
+Now you can go further towards the west
+After attack - Your Health: 8 Enemy Health: -1
+
+true.
+
+?- use(sword).
+OK.
+true.
+
+?- w.
+There is a fork in the road, 
+You now you can go south or north.
+
+
+true.
+
+?- n.
+You come across a Ashurbanipal mage!
+Mage uses magic, so you can't avoid his attacks!
+Now you have to fight!
+
+
+true.
+
+?- attack.
+You defeated the enemy!
+You got 5 additional skill points from this fight! Skill points left: 10
+
+The mage has been defeated
+Now you can go further towards the west
+After attack - Your Health: 6 Enemy Health: 0
+
+true.
+
+?- add_health.
+Current Health value: 7
+Skill points left: 9
+true.
+
+?- add_health.
+Current Health value: 8
+Skill points left: 8
+true.
+
+?- add_health.
+Current Health value: 9
+Skill points left: 7
+true.
+
+?- add_health.
+Current Health value: 10
+Skill points left: 6
+true.
+
+?- look.
+The mage has been defeated
+Now you can go further towards the west
+
+
+true.
+
+?- w.
+You can feel it in your bones,
+You are getting closer to the Emperor.
+The tunnel now turns towards south.
+
+
+true.
+
+?- s.
+There is another fork in the road, 
+You now you can go north, to the room where you could expect a mage,
+you can go south, where is nothing special...,
+or now you can go west, towards the main objective!,
+
+
+true.
+
+?- w.
+You come across another Ashurbanipal warrior!
+This seems to be the last fight before meeting with the Emperor.
+
+
+true.
+
+?- attack.
+After attack - Your Health: 7 Enemy Health: 5
+
+true.
+
+?- attack.
+You defeated the enemy!
+The warrior has been defeated
+Now you can easily head straight to Emperors castle.
+After attack - Your Health: 5 Enemy Health: 0
+
+true.
+
+?- w.
+--- CONGRATULATIONS! ---
+You reached the exit from the catacombs,
+lucky for you, they connect straight to the undergrounds
+of Emperors castle. You saved the Emperor!!!
+
+The game is over. Please enter the "halt." command.
+
+
+true.
